@@ -1,0 +1,38 @@
+# This is a partial constraints file for ButterStick r1.0,
+# produced based on
+# https://github.com/butterstick-fpga/butterstick-bootloader/blob/main/gateware/rtl/platform/butterstick_r1d0.py
+# All mistakes mine, Tommy Thorn, 2021
+
+LOCATE COMP "clk30" SITE "B12";
+IOBUF PORT "clk30" IO_TYPE=LVCMOS18;
+FREQUENCY PORT "clk30" 30.0 MHz;
+
+LOCATE COMP "rst_n" SITE "R3";
+IOBUF PORT "rst_n" IO_TYPE=LVCMOS33 OPENDRAIN=ON;
+
+LOCATE COMP "user_btn[0]" SITE "U16";
+IOBUF PORT "user_btn[0]" IO_TYPE=SSTL135_I;
+
+LOCATE COMP "user_btn[1]" SITE "T17";
+IOBUF PORT "user_btn[1]" IO_TYPE=SSTL135_I;
+
+LOCATE COMP "led_rgb_multiplex_a[0]" SITE "C13";
+IOBUF PORT "led_rgb_multiplex_a[0]" IO_TYPE=LVCMOS33;
+LOCATE COMP "led_rgb_multiplex_a[1]" SITE "D12";
+IOBUF PORT "led_rgb_multiplex_a[1]" IO_TYPE=LVCMOS33;
+LOCATE COMP "led_rgb_multiplex_a[2]" SITE "U2";
+IOBUF PORT "led_rgb_multiplex_a[2]" IO_TYPE=LVCMOS33;
+LOCATE COMP "led_rgb_multiplex_a[3]" SITE "T3";
+IOBUF PORT "led_rgb_multiplex_a[3]" IO_TYPE=LVCMOS33;
+LOCATE COMP "led_rgb_multiplex_a[4]" SITE "D13";
+IOBUF PORT "led_rgb_multiplex_a[4]" IO_TYPE=LVCMOS33;
+LOCATE COMP "led_rgb_multiplex_a[5]" SITE "E13";
+IOBUF PORT "led_rgb_multiplex_a[5]" IO_TYPE=LVCMOS33;
+LOCATE COMP "led_rgb_multiplex_a[6]" SITE "C16";
+IOBUF PORT "led_rgb_multiplex_a[6]" IO_TYPE=LVCMOS33;
+LOCATE COMP "led_rgb_multiplex_b[0]" SITE "T1";
+IOBUF PORT "led_rgb_multiplex_b[0]" IO_TYPE=LVCMOS33;
+LOCATE COMP "led_rgb_multiplex_b[1]" SITE "R1";
+IOBUF PORT "led_rgb_multiplex_b[1]" IO_TYPE=LVCMOS33;
+LOCATE COMP "led_rgb_multiplex_b[2]" SITE "U1";
+IOBUF PORT "led_rgb_multiplex_b[2]" IO_TYPE=LVCMOS33;
