@@ -25,7 +25,7 @@ dfu: ${PROJ}.dfu
 	dfu-util --alt 0 --download $< --reset
 
 %.json: %.v
-	yosys -p "synth_ecp5 -json $@" $<
+	yosys -p "read_verilog $<; synth_ecp5 -json $@"
 
 %_out.config: %.json
 	nextpnr-ecp5 --json $< --textcfg $@ --um5g-85k --speed 8 --package CABGA381 --lpf ButterStick_r1.0.pcf
